@@ -22,7 +22,7 @@ body {
 /* Cabeçalho ocupa toda a largura */
 header {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #f13f6f;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -67,8 +67,8 @@ header h1 {
 /* Estilo do canvas */
 #tela-jogo {
     display: block;
-    background-color: #e8f5e9;
-    border: 2px solid #4CAF50;
+    background-color: #f2e5e8;
+    border: 2px solid #f13f6f;
     border-radius: 4px;
     margin: 10px auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -82,13 +82,13 @@ header h1 {
 }
 
 #valor-pontuacao, #valor-recorde {
-    color: #4CAF50;
+    color: #f13f6f;
 }
 
 /* Estilo dos botões */
 button {
     padding: 10px 15px;
-    background-color: #4CAF50;
+    background-color: #f13f6f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -99,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #8c2541;
     transform: scale(1.05);
 }
 
@@ -166,7 +166,7 @@ button:disabled {
 }
 
 .modal-conteudo h2 {
-    color: #4CAF50;
+    color: #f13f6f;
     margin-bottom: 15px;
 }
 

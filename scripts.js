@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Desenha a tela inicial
     function desenharTelaInicial() {
-        ctx.fillStyle = '#e8f5e9';
+        ctx.fillStyle = '#f3eff0';
         ctx.fillRect(0, 0, larguraJogo, alturaJogo);
         
-        ctx.fillStyle = '#4CAF50';
+        ctx.fillStyle = '#f13f6f';
         ctx.font = '24px Roboto';
         ctx.textAlign = 'center';
         ctx.fillText('Jogo da Cobrinha', larguraJogo / 2, alturaJogo / 2 - 30);
@@ -306,27 +306,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Desenha o estado atual do jogo
     function desenharJogo() {
         // Limpa o canvas
-        ctx.fillStyle = '#e8f5e9';
+        ctx.fillStyle = '#f3ecee';
         ctx.fillRect(0, 0, larguraJogo, alturaJogo);
         
         // Desenha a cobrinha
         for (let i = 0; i < cobrinha.length; i++) {
             // Cabeça com cor diferente
             if (i === 0) {
-                ctx.fillStyle = '#388E3C';
+                ctx.fillStyle = '#8c2541';
             } else {
-                ctx.fillStyle = '#4CAF50';
+                ctx.fillStyle = '#f13f6f';
             }
             
             ctx.fillRect(cobrinha[i].x, cobrinha[i].y, tamanhoBloco, tamanhoBloco);
             
             // Borda dos segmentos
-            ctx.strokeStyle = '#e8f5e9';
+            ctx.strokeStyle = '#f3ecee';
             ctx.strokeRect(cobrinha[i].x, cobrinha[i].y, tamanhoBloco, tamanhoBloco);
         }
         
         // Desenha a comida
-        ctx.fillStyle = '#FF5722';
+        ctx.fillStyle = '#ffae4e';
         ctx.beginPath();
         const raio = tamanhoBloco / 2;
         ctx.arc(
