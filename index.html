@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Cobrinha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+</head>
+<body>
+    <header>
+        <h1>Jogo da Cobrinha (Snake Game)</h1>
+    </header>
+    
+    <main>
+        <div id="painel-jogo">
+            <div id="pontuacao">Pontuação: <span id="valor-pontuacao">0</span></div>
+            <div id="recorde">Recorde: <span id="valor-recorde">0</span></div>
+            <canvas id="tela-jogo"></canvas>
+            <div id="controles-toque">
+                <button id="botao-cima" aria-label="Mover para cima">↑</button>
+                <div id="controles-horizontais">
+                    <button id="botao-esquerda" aria-label="Mover para esquerda">←</button>
+                    <button id="botao-direita" aria-label="Mover para direita">→</button>
+                </div>
+                <button id="botao-baixo" aria-label="Mover para baixo">↓</button>
+            </div>
+        </div>
+        
+        <div id="menu-jogo">
+            <button id="botao-iniciar">Iniciar Jogo</button>
+            <button id="botao-pausar" disabled>Pausar</button>
+            <button id="botao-reiniciar" disabled>Reiniciar</button>
+        </div>
+        
+        <div id="modal-game-over" class="modal">
+            <div class="modal-conteudo">
+                <h2>Fim de Jogo!</h2>
+                <p>Sua pontuação: <span id="pontuacao-final">0</span></p>
+                <p id="mensagem-recorde"></p>
+                <button id="botao-jogar-novamente">Jogar Novamente</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Desenvolvido com ❤️ por <a href="https://hub.agenciam2a.com.br/" target="_blank" rel="noopener noreferrer">Jota / José Guilherme Pandolfi</a> | <a href="#" id="botao-instrucoes">Instruções</a></p>
+    </footer>
+    
+    <div id="modal-instrucoes" class="modal">
+        <div class="modal-conteudo">
+            <h2>Como Jogar</h2>
+            <ul>
+                <li>Use as teclas de seta (↑ ↓ ← →) para controlar a cobrinha</li>
+                <li>Em dispositivos móveis, use os botões na tela</li>
+                <li>Colete as comidas para crescer e ganhar pontos</li>
+                <li>Evite colidir com as paredes ou com o próprio corpo</li>
+                <li>Pressione ESC ou o botão Pausar para pausar o jogo</li>
+            </ul>
+            <button id="fechar-instrucoes">Fechar</button>
+        </div>
+    </div>
+    
+    <script src="scripts.js" defer></script>
+</body>
+</html>

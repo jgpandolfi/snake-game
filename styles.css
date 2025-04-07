@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reseta estilos padrão dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout do body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Cabeçalho ocupa toda a largura */
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Rodapé ocupa toda a largura */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Centraliza o conteúdo principal e aplica o estilo padrão */
+main {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Estilo do cabeçalho */
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Estilo do painel de jogo */
+#painel-jogo {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Estilo do canvas */
+#tela-jogo {
+    display: block;
+    background-color: #e8f5e9;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    margin: 10px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da pontuação e recorde */
+#pontuacao, #recorde {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#valor-pontuacao, #valor-recorde {
+    color: #4CAF50;
+}
+
+/* Estilo dos botões */
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Menu de jogo */
+#menu-jogo {
+    margin: 15px 0;
+}
+
+/* Controles de toque para dispositivos móveis */
+#controles-toque {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#controles-horizontais {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+#controles-toque button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: rgba(76, 175, 80, 0.8);
+    border-radius: 50%;
+}
+
+/* Modal de Game Over e Instruções */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-conteudo h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.modal-conteudo p {
+    margin: 10px 0;
+}
+
+.modal-conteudo ul {
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.modal-conteudo li {
+    margin: 8px 0;
+}
+
+#mensagem-recorde {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* Rodapé da página */
+footer p {
+    font-size: 0.9rem;
+    color: #d3d3d3;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Layout responsivo */
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #controles-toque {
+        display: flex;
+    }
+    
+    button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    
+    .modal-conteudo {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    #painel-jogo {
+        max-width: 100%;
+    }
+    
+    #tela-jogo {
+        max-width: 100%;
+    }
+    
+    #controles-toque button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
